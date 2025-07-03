@@ -34,14 +34,29 @@ Simple NRF52840 / E22 Meshtastic node in an ultra-small form factor.
    - Get the latest NRF52 firmware release `.zip` or `.hex` file from the [Meshtastic releases page](https://github.com/meshtastic/firmware/releases).
 
 3. **Put the Board in Bootloader Mode**  
-   - Hold the **RESET** button while connecting USB.
-   - Release the button after plugging in.
-   - The board should appear as a USB drive or serial device.
+   - Connect the USB cable to your computer and Pro-micro
+   - With a small metal object, short the **GND** and **RST** pin on the Pro-micro quickly **twice**
+   - The board should appear as a USB drive
+
+3a. **NEW BOARDS ONLY: Update the NICE_NANO Pro-micro Bootloader**
+   - If this is your first use of a new Pro-Micro, a bootloader upgrade is required
+   - Download and unzip the Pro-micro_bootloader_update.zip file.
+   - **DO NOT COPY BOTH FILES AT THE SAME TIME**
+   - Copy the Hex file **FIRST** and drop it onto the USB drive
+   - Then copy the UF2 file **NEXT** and drop it onto the USB drive
+   - The drive will disconnect
+   - Unplug the device and keep it powered off for 10 seconds.
+   - Plug it back in and start over with #3
+   - YOU WILL NOT BE DOING THIS AGAIN.
 
 4. **Flash via Meshtastic Flasher (Recommended)**  
    - Download and open [Meshtastic Flasher](https://flasher.meshtastic.org).
-   - Select your device and firmware version.
-   - Click **Flash** and wait for completion.
+   - Select "NRF32 Pro-micro DIY" 
+   - Select your firmware version.
+   - Click **Download** and wait for completion.
+   - Drag the downloaded firmware file to the Pro-micro USB drive.
+   - The drive will disconnect
+   - Unplug the device and keep it powered off for 10 seconds.
 
    **OR**
 
