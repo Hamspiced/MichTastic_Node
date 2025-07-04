@@ -26,19 +26,12 @@ Simple NRF52840 / E22 Meshtastic node in an ultra-small form factor.
 
 ### 💾 Flashing Meshtastic Firmware
 
-1. **Install Dependencies**  
-   Make sure you have Python and the `esptool` or `nrfutil` utilities installed.  
-   > For NRF52840 boards, you can also use the Meshtastic Flasher GUI or `dfu-util`.
-
-2. **Download Firmware**  
-   - Get the latest NRF52 firmware release `.zip` or `.hex` file from the [Meshtastic releases page](https://github.com/meshtastic/firmware/releases).
-
-3. **Put the Board in Bootloader Mode**  
+1. **Put the Board in Bootloader Mode**  
    - Connect the USB cable to your computer and Pro-micro
    - With a small metal object, short the **GND** and **RST** pin on the Pro-micro quickly **twice**
    - The board should appear as a USB drive
 
-4. **NEW BOARDS ONLY: Update the NICE_NANO Pro-micro Bootloader**
+2. **NEW BOARDS ONLY: Update the NICE_NANO Pro-micro Bootloader**
    - If this is your first use of a new Pro-Micro, a bootloader upgrade is required
    - Download and unzip the Pro-micro_bootloader_update.zip file.
    - **DO NOT COPY BOTH FILES AT THE SAME TIME**
@@ -49,9 +42,9 @@ Simple NRF52840 / E22 Meshtastic node in an ultra-small form factor.
    - Plug it back in and start over with #3
    - YOU WILL NOT BE DOING THIS AGAIN.
 
-5. **Flash via Meshtastic Flasher (Recommended)**  
-   - Download and open [Meshtastic Flasher](https://flasher.meshtastic.org).
-   - Select "NRF32 Pro-micro DIY" 
+3. **Flash via Meshtastic Flasher (Recommended)**  
+   - Download firmware from [Meshtastic Flasher](https://flasher.meshtastic.org).
+   - Select "NRF52 Pro-micro DIY" 
    - Select your firmware version.
    - Click **Download** and wait for completion.
    - Drag the downloaded firmware file to the Pro-micro USB drive.
@@ -60,7 +53,16 @@ Simple NRF52840 / E22 Meshtastic node in an ultra-small form factor.
 
    **OR**
 
-   **Flash via Command Line**  
+**Flash via Command Line**
+
+4. **Install Dependencies**  
+   Make sure you have Python and the `esptool` or `nrfutil` utilities installed.  
+   > For NRF52840 boards, you can also use the Meshtastic Flasher GUI or `dfu-util`.
+
+5. **Download Firmware**  
+   - Get the latest NRF52 firmware release `.zip` or `.hex` file from the [Meshtastic releases page](https://github.com/meshtastic/firmware/releases).
+  
+
    - Example using `nrfutil`:
      ```bash
      nrfutil dfu usb-serial -pkg firmware.zip -p /dev/ttyACM0
