@@ -1,0 +1,12 @@
+Changelog
+
+V2
+Added I2C Screen.  Should work with any SSD1306 Driver I2C Serial 128x64 Screen.
+Added Userbutton
+Moved antenna from top of the node to the side to remove interference from the longer trace
+Added groundplane
+
+V1.2
+Added SMA Antenna connection to top of board
+Added Voltage Divider Circuit
+

@@ -22,6 +22,9 @@ Simple NRF52840 / E22 Meshtastic node in an ultra-small form factor.
    - `F1` and `F2` can be jumpered.  
    - These are resettable fuses for those of us who can’t always follow `P+` and `P-` directions (like me).
 
+6. **Add I2C Screen (Optional)**
+	- Solder a I2C SSD1306 Screen to the pin pads.
+	- I reccomend [Dual Colored Oled](https://a.co/d/a9zIK9t)
 ---
 
 ### 💾 Flashing Meshtastic Firmware
